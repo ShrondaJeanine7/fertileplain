@@ -1,0 +1,74 @@
+# Jekyll Configuration for Shronda Jeanine & Company
+
+# Site settings
+title: "Shronda Jeanine & Company"
+email: hello@shrondajeanine.co
+description: >-
+  Culturally-rooted solutions that empower and uplift. Grounded in heritage,
+  healing and uplifting experiences that honor tradition while building towards the future.
+
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://shrondajeanine.github.io" # Update this to your GitHub Pages URL
+
+twitter_username: shrondajeanine
+github_username: shrondajeanine
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - .git/
+  - .github/
+
+# Collections
+collections:
+  resources:
+    output: true
+    permalink: /resources/:path/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "resources"
+    values:
+      layout: "resource"
+
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Author information
+author:
+  name: "Shronda Jeanine"
+  email: "hello@shrondajeanine.co"
+  description: "Founder & Creative Director"
+  logo: "/images/logo.png"
+
+# Social media links
+social:
+  name: "Shronda Jeanine & Company"
+  links:
+    - "https://twitter.com/shrondajeanine"
+    - "https://github.com/shrondajeanine"
+    - "https://linkedin.com/in/shrondajeanine"
+
+# Sass configuration
+sass:
+  sass_dir: _sass
+  style: compressed
